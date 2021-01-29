@@ -11,3 +11,4 @@
 2021-01-29 11:50:38,665 logconfig.py[line:15] CRITICAL 日志测试02
 2021-01-29 11:51:03,346 logconfig.py[line:14] INFO 测试日志01
 2021-01-29 11:51:03,346 logconfig.py[line:15] CRITICAL 测试日志02
+2021-01-29 18:54:36,496 email_model2.py[line:51] INFO 邮件发送成功
