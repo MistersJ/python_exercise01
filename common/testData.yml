@@ -1,0 +1,48 @@
+# A3环境数据库配置信息
+CPQ4A3:
+  CPQ4A3: THIS IS THE KEY INFO TO CONTIMUE TO THE A3 ENVIRONMENT
+  hpcp_cpq:
+    - hpcp_cpq
+    - ASDF123456
+  hqc_cpq:
+    - hqc_cqp
+    - ASDF123456
+
+
+# 数组也可以采用行内写法：
+animal: [cat, dog]  # 转行成python对象是 {'animal': ['cat', 'dog']}
+
+# 对象是一组组的键值对，使用冒号表示结构
+log:
+ file_name: test.log
+ backup_count: 5
+# yaml也允许另外一种写法，将所有的键值对写成一个行内对象
+# log: {file_name: test.log, backup_count: 5}
+
+# 布尔值用 true 和 false表示，null用 ~ 表示
+isSet: true
+flag: false
+parent: ~
+
+# yaml允许用两个感叹号表示强制转换
+str01: !!str 123
+str02: !!str true
+
+# 锚点 &和别名 *，可以用来引用
+defaults: &defaults
+   adapter: postgres
+   host: localhost
+
+development:
+   databases: myapp_deveploment
+   <<: *defaults
+
+# 32-38行，等同于以下代码：
+#defaults:
+#   adapter: postgres
+#   host: localhost
+#
+#development:
+#   databases: myapp_deveploment
+#   adapter: postgres
+#   host: localhost

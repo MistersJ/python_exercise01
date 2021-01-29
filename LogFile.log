@@ -1,0 +1,13 @@
+2021-01-26 16:57:05,284 time_model.py[line:78] INFO 三天前的时间为：2021-01-23 16:57:05
+2021-01-26 16:58:31,368 time_model.py[line:79] INFO 三天前的时间为：2021-01-23 16:58:31
+2021-01-26 17:01:57,789 time_model.py[line:79] DEBUG 三天前的时间为：2021-01-23 17:01:57
+2021-01-27 16:25:19,203 email_model2.py[line:46] INFO 邮件发送成功
+2021-01-27 16:39:41,368 email_model2.py[line:47] INFO 邮件发送成功
+2021-01-27 17:15:58,790 log_model.py[line:15] INFO This is info message
+2021-01-27 17:15:58,791 log_model.py[line:16] WARNING This is warning message
+2021-01-27 17:15:58,791 log_model.py[line:17] ERROR This is error message
+2021-01-27 17:15:58,791 log_model.py[line:18] CRITICAL This is critical message
+2021-01-29 11:50:38,664 logconfig.py[line:14] INFO 日志测试
+2021-01-29 11:50:38,665 logconfig.py[line:15] CRITICAL 日志测试02
+2021-01-29 11:51:03,346 logconfig.py[line:14] INFO 测试日志01
+2021-01-29 11:51:03,346 logconfig.py[line:15] CRITICAL 测试日志02

@@ -1,0 +1,113 @@
+Sheets Options:  # sheet页签操作。
+  sht.name: 获取sheet页的名称 # a string of one sheet name or a list of any sheets names.
+  sht.clear: 清除sheet页的内容和样式 # no callable value.
+  sht.contents(): 清除sheet页的内容 # no callable value.
+  sht.delete: 删除sheet页签 # no callable value.
+
+Cells Options: # 单元格操作。rng=wb.sheets[i].range('cell_A:cell_B')；one cell or a region of any cells.
+  rng.value: 单元格赋值 # =str、list
+  rng.options(ndim=2).value: 读取二位数组的值
+  rng.merge(): 合并单元格 # no callable value.
+  rng.unmerge(): 拆分单元格 # no callable value.
+  rng.clear: 清除区域内容、样式 # clear an area contents and style
+  rng.clear_contents(): 清除区域内容、样式保留 # clear an area contents but keep stay it's style.
+  rng.rows.autofit(): 自适应行高
+  rng.columns.autofit(): 自适应列宽
+  rng.formula: 单元格公式 # =str，where str is a formula expression.
+  rng.api.NumberFormat: 数字格式 # a type of string use to define the format of numbers. such as '0.00'
+  rng.color: 单元格底纹，颜色 # =(R，G，B)；0XGGBBRR；int:R+G×256+B×65536
+  rng.row_height: 单元格行高 # float，单位为像素，待确认. 本机excel行高默认22像素
+  rng.column_width: 单元格列宽 # float，单位为像素，待确认.本机列宽默认72像素
+  rng.api.HorizontalAlignment: 水平对齐方式 # -4108: 水平居中; -4131: 靠左对齐; -4152: 靠右对齐
+  rng.api.VerticalAlignment: 垂直对齐方式 # -4108: 垂直居中(默认); -4160: 靠上对齐; -4107: 靠下对齐; -4130: 自动换行对齐
+  rng.api.Rows(i).Insert(): 插入行 # no callable value.insert a row，and i row change to (i+1) row.
+  rng.api.Columns(i).Insert(): 插入列 # no callable value.insert acolumn，and i column change to (i+1) column.
+  rng.api.EntireRow.Delete(): 删除行 # no callable value.such as: rng=wb.sheets[0].range(A2)，then it will delete row 2.
+  rng.api.EntireColumn.Delete(): 删除列 # no callable value.such as: rng=wb.sheets[0].range(A2)，then it will delete column A.
+  rng(i，j).api.Copy(rng(m，n).api): 复制&粘贴 # copy the value rng(i，j) to rmg(m，n).
+  rng.api.Borders(i).LineStyle: 边框的线型 # =int，边框类型i，对应的线性
+  rng.api.Borders(i).Weight: 边框的线宽 # =int，边框类型i，对应的线宽
+  rng.api.Borders(i).Color: 边框的颜色 # =(R，G，B)；0XGGBBRR；int:R+G×256+B×65536
+
+Font Settings: # 字体设置
+  rng.api.Font.Name: 字体名称 # str/中文
+  rng.api.Font.Size: 字体大小 # int/float/中文
+  rng.api.Font.Bold: 字体加粗 # bool:True/False
+  rng.api.Font.Color: 字体颜色 # R，G，B); 0XGGBBRR; int:R+G×256+B×65536
+  rng.api.Font.ColorIndex: 字体颜色 # 颜色的索引值。
+  rng.api.Font.Italic: 斜体字 # bool:True/False
+  rng.api.Font.Underline: 下划线  # 4: 普通下划线; 5: 双下划线; -4119: 粗双下划线
+  rng.api.Font.Strikethrough: 删除线 # bool:True/False
+  rng.api.GetCharacters(startNo，length).Subscript: 下标 # bool: True/False.化学分子表达式等H20
+  rng.api.GetCharacters(startNo，length).Superscript: 上标 # bool: True/False.平方计算等a2
+
+
+Borders value: # 边框枚举值说明
+  左上-右下对角线 : 5
+  左下-右上对角线 : 6
+  左边框 : 7
+  上边框 : 8
+  下边框 : 9
+  右边框 : 10
+  内部垂直线 : 11
+  内部水平线 : 12
+
+LineStyle value: # 线型枚举值说明
+  实线: 1
+  点划线: 4
+  双点划线: 5
+  倾斜的划线: 13
+  虚线: -4115
+  点式线: -4118
+  双线: -4119
+  无线: -4142
+
+Weight value: # 线宽枚举值说明
+  细: 1
+  细长: 2
+  粗: 4
+  中: -4138
+
+ColorIndex value:
+  黑色: 1
+  白色: 2
+  红色: 3
+  鲜绿: 4
+  蓝色: 5
+  黄色: 6
+  粉红: 7
+  青绿: 8
+  深红: 9
+  绿色: 10
+  深蓝: 11
+  深黄: 12
+  紫罗兰: 13
+  青色: 14
+  灰色25: 15
+  灰色50: 16
+  天蓝: 33
+  浅青绿: 34
+  浅绿: 35
+  浅黄: 36
+  淡蓝: 37
+  玫瑰红: 38
+  淡紫: 39
+  茶色: 40
+  浅蓝: 41
+  水绿色: 42
+  酸橙色: 43
+  金色: 44
+  浅橙色: 45
+  橙色: 46
+  蓝灰: 47
+  灰色40: 48
+  深青: 49
+  海绿: 50
+  深绿: 51
+  橄榄: 52
+  褐色: 53
+  梅红: 54
+  靛蓝: 55
+  灰色80: 56
+  无色: -4142
+  自动: -4105
