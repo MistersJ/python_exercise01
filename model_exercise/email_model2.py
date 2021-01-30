@@ -8,7 +8,7 @@ from email.header import Header
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from common.log import logger
+# from common.log import logger
 
 # 1.设置邮箱host、用户账号/密码、发件邮箱、收件邮箱等参数
 host = "smtp.qq.com"
@@ -44,7 +44,7 @@ try:
     server = smtplib.SMTP(host)  # 连接邮箱服务
     server.login(user, pswd)  # 用户登录邮箱
     server.sendmail(sender, recivers, msg.as_string())  # 发送邮件
-    logger.info("邮件发送成功")
+    print("邮件发送成功")
     server.quit()
 except smtplib.SMTPException:
-    logger.error("邮件发送失败")
+    print("邮件发送失败")
